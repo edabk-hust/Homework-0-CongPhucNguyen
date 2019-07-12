@@ -1,0 +1,11 @@
+fc = 10;   %fc = 10Hz
+fs = 800;  %fs > 2fc va chon fs=800Hz
+t = -0.5:1/fs:1.5;
+x = sin(2*pi*fc*t);
+y = rectpuls(t - 0.5);
+z = x.*y ;
+%Ve do thi
+plot(t,z);
+grid on;
+xlabel('t (s)');
+ylabel('z(t)');
